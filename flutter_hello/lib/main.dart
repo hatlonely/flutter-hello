@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hello/buildin/icon.dart';
 import 'package:flutter_hello/buildin/text.dart';
 
 void main() {
@@ -10,54 +11,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hello Flutter',
+      routes: {
+        '/text': (context) => TextDemo(),
+        '/icon': (context) => IconDemo(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TextDemo(),
+      home: HomePage(title: "Hello Flutter"),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class HomePage extends StatelessWidget {
   final String title;
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  HomePage({Key? key, required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(this.title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/text'), child: Text("text")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/icon'), child: Text("icon"))
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
