@@ -6,7 +6,15 @@ class IconDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(children: [Icon(Icons.favorite)])
+        Icon(Icons.favorite),
+        Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary),
+        Icon(Icons.delete, color: Theme.of(context).colorScheme.primaryVariant),
+        Icon(Icons.visibility, color: Theme.of(context).colorScheme.secondary),
+        Icon(Icons.visibility_off, color: Theme.of(context).colorScheme.secondaryVariant),
+        Icon(Icons.dashboard, color: Theme.of(context).colorScheme.error),
+        Icon(Icons.analytics, size: 24),
+        Icon(Icons.analytics, size: 30),
+        Icon(Icons.analytics, size: 36),
       ],
     );
   }
