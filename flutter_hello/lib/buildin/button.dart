@@ -4,13 +4,10 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
-import 'package:progress_state_button/progress_button.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class ButtonDemo extends StatelessWidget {
   final RoundedLoadingButtonController _btnController = RoundedLoadingButtonController();
-  ButtonState stateTextWithIconMinWidthState = ButtonState.idle;
-  ButtonState stateTextWithIcon = ButtonState.idle;
 
   @override
   Widget build(BuildContext context) {
