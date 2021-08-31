@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hello/buildin/button.dart';
 import 'package:flutter_hello/buildin/icon.dart';
+import 'package:flutter_hello/buildin/scaffold.dart';
 import 'package:flutter_hello/buildin/text.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/text': (context) => TextDemo(),
         '/icon': (context) => IconDemo(),
         '/button': (context) => ButtonDemo(),
+        '/scaffold': (context) => ScaffoldDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -42,6 +44,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/text'), child: Text("text")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/icon'), child: Text("icon")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/button'), child: Text("button")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/scaffold'), child: Text("scaffold")),
           ],
         ),
       ),
