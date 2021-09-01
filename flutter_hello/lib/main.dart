@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hello/buildin/button.dart';
+import 'package:flutter_hello/buildin/grid_view.dart';
 import 'package:flutter_hello/buildin/icon.dart';
+import 'package:flutter_hello/buildin/rich_text.dart';
 import 'package:flutter_hello/buildin/scaffold.dart';
 import 'package:flutter_hello/buildin/text.dart';
 
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
         '/icon': (context) => IconDemo(),
         '/button': (context) => ButtonDemo(),
         '/scaffold': (context) => ScaffoldDemo(),
+        '/gridView': (context) => GridViewDemo(),
+        '/richText': (context) => RichTextDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -45,6 +49,8 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/icon'), child: Text("icon")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/button'), child: Text("button")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/scaffold'), child: Text("scaffold")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/gridView'), child: Text("gridView")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/richText'), child: Text("richText")),
           ],
         ),
       ),
