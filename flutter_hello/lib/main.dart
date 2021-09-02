@@ -5,6 +5,7 @@ import 'package:flutter_hello/buildin/icon.dart';
 import 'package:flutter_hello/buildin/rich_text.dart';
 import 'package:flutter_hello/buildin/scaffold.dart';
 import 'package:flutter_hello/buildin/text.dart';
+import 'package:flutter_hello/buildin/text_field.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/scaffold': (context) => ScaffoldDemo(),
         '/gridView': (context) => GridViewDemo(),
         '/richText': (context) => RichTextDemo(),
+        '/textField': (context) => TextFieldDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -52,6 +54,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/scaffold'), child: Text("scaffold")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/gridView'), child: Text("gridView")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/richText'), child: Text("richText")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/textField'), child: Text("textField")),
           ],
         ),
       ),
