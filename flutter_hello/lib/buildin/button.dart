@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
+enum WhyFarther { harder, smarter, selfStarter, tradingCharter }
+
 class ButtonDemo extends StatelessWidget {
   final RoundedLoadingButtonController _btnController = RoundedLoadingButtonController();
 
@@ -45,6 +47,49 @@ class ButtonDemo extends StatelessWidget {
               )..show(context);
             },
           ),
+          PopupMenuButton<WhyFarther>(
+            onSelected: (WhyFarther result) {
+              print(result);
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<WhyFarther>>[
+              const PopupMenuItem<WhyFarther>(
+                value: WhyFarther.harder,
+                child: Text('Working a lot harder'),
+              ),
+              const PopupMenuItem<WhyFarther>(
+                value: WhyFarther.smarter,
+                child: Text('Being a lot smarter'),
+              ),
+              const PopupMenuItem<WhyFarther>(
+                value: WhyFarther.selfStarter,
+                child: Text('Being a self-starter'),
+              ),
+              const PopupMenuItem<WhyFarther>(
+                value: WhyFarther.tradingCharter,
+                child: Text('Placed in charge of trading charter'),
+              ),
+            ],
+          ),
+          DropdownButton<String>(
+            value: 'One',
+            icon: const Icon(Icons.arrow_downward),
+            iconSize: 24,
+            elevation: 16,
+            style: const TextStyle(color: Colors.deepPurple),
+            underline: Container(
+              height: 2,
+              color: Colors.deepPurpleAccent,
+            ),
+            onChanged: (String? newValue) {
+              print(newValue);
+            },
+            items: <String>['One', 'Two', 'Free', 'Four'].map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
+          )
         ],
       ),
     );
