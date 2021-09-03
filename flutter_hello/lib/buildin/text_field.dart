@@ -13,9 +13,7 @@ class TextFieldDemo extends StatelessWidget {
 
 class TextFieldInputDemo extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _TextFieldInputDemoState();
-  }
+  State<StatefulWidget> createState() => _TextFieldInputDemoState();
 }
 
 class _TextFieldInputDemoState extends State<TextFieldInputDemo> {

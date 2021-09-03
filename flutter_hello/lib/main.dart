@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hello/buildin/button.dart';
+import 'package:flutter_hello/buildin/checkbox.dart';
 import 'package:flutter_hello/buildin/grid_view.dart';
 import 'package:flutter_hello/buildin/icon.dart';
 import 'package:flutter_hello/buildin/rich_text.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/gridView': (context) => GridViewDemo(),
         '/richText': (context) => RichTextDemo(),
         '/textField': (context) => TextFieldDemo(),
+        '/checkbox': (context) => CheckBoxDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -55,6 +57,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/gridView'), child: Text("gridView")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/richText'), child: Text("richText")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/textField'), child: Text("textField")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/checkbox'), child: Text("checkbox")),
           ],
         ),
       ),
