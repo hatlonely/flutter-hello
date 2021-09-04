@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hello/buildin/button.dart';
+import 'package:flutter_hello/buildin/card.dart';
 import 'package:flutter_hello/buildin/checkbox.dart';
 import 'package:flutter_hello/buildin/grid_view.dart';
 import 'package:flutter_hello/buildin/icon.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/checkbox': (context) => CheckBoxDemo(),
         '/slider': (context) => SliderDemo(),
         '/switch': (context) => SwitchDemo(),
+        '/card': (context) => CardDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -64,6 +66,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/checkbox'), child: Text("checkbox")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/slider'), child: Text("slider")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/switch'), child: Text("switch")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/card'), child: Text("card")),
           ],
         ),
       ),
