@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hello/buildin/alert_dialog.dart';
 import 'package:flutter_hello/buildin/button.dart';
 import 'package:flutter_hello/buildin/card.dart';
 import 'package:flutter_hello/buildin/checkbox.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         '/chip': (context) => ChipDemo(),
         '/dataTable': (context) => DataTableDemo(),
         '/progressIndicator': (context) => ProgressIndicatorDemo(),
+        '/alertDialog': (context) => AlertDialogDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -77,6 +79,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/dataTable'), child: Text("dataTable")),
             ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, '/progressIndicator'), child: Text("progressIndicator")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/alertDialog'), child: Text("alertDialog")),
           ],
         ),
       ),
