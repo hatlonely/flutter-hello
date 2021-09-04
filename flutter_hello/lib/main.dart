@@ -3,8 +3,10 @@ import 'package:flutter_hello/buildin/button.dart';
 import 'package:flutter_hello/buildin/card.dart';
 import 'package:flutter_hello/buildin/checkbox.dart';
 import 'package:flutter_hello/buildin/chip.dart';
+import 'package:flutter_hello/buildin/data_table.dart';
 import 'package:flutter_hello/buildin/grid_view.dart';
 import 'package:flutter_hello/buildin/icon.dart';
+import 'package:flutter_hello/buildin/progress_indicator.dart';
 import 'package:flutter_hello/buildin/rich_text.dart';
 import 'package:flutter_hello/buildin/scaffold.dart';
 import 'package:flutter_hello/buildin/slider.dart';
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
         '/switch': (context) => SwitchDemo(),
         '/card': (context) => CardDemo(),
         '/chip': (context) => ChipDemo(),
+        '/dataTable': (context) => DataTableDemo(),
+        '/progressIndicator': (context) => ProgressIndicatorDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -70,6 +74,9 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/switch'), child: Text("switch")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/card'), child: Text("card")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/chip'), child: Text("chip")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/dataTable'), child: Text("dataTable")),
+            ElevatedButton(
+                onPressed: () => Navigator.pushNamed(context, '/progressIndicator'), child: Text("progressIndicator")),
           ],
         ),
       ),
