@@ -5,6 +5,8 @@ import 'package:flutter_hello/buildin/grid_view.dart';
 import 'package:flutter_hello/buildin/icon.dart';
 import 'package:flutter_hello/buildin/rich_text.dart';
 import 'package:flutter_hello/buildin/scaffold.dart';
+import 'package:flutter_hello/buildin/slider.dart';
+import 'package:flutter_hello/buildin/switch.dart';
 import 'package:flutter_hello/buildin/text.dart';
 import 'package:flutter_hello/buildin/text_field.dart';
 
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
         '/richText': (context) => RichTextDemo(),
         '/textField': (context) => TextFieldDemo(),
         '/checkbox': (context) => CheckBoxDemo(),
+        '/slider': (context) => SliderDemo(),
+        '/switch': (context) => SwitchDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -58,6 +62,8 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/richText'), child: Text("richText")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/textField'), child: Text("textField")),
             ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/checkbox'), child: Text("checkbox")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/slider'), child: Text("slider")),
+            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/switch'), child: Text("switch")),
           ],
         ),
       ),
